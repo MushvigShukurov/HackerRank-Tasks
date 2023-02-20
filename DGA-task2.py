@@ -15,6 +15,13 @@ def countOfElement(_search,_list):
         if(element==_search): count+=1
     return count 
 
+
+def count_of_element_2(_search,_list):
+    new_list = filter(lambda element: element==_search, _list)
+    return len(list(new_list))
+
+
+
 if __name__ == "__main__":
     # listlərin count metodundan istifadə edərək :
     print(CountOfElement.__name__)
@@ -34,3 +41,10 @@ if __name__ == "__main__":
     print(countOfElement(4,my_list))   # 3
     print(countOfElement(6,my_list))   # 6
     print(countOfElement(100,my_list)) # 0
+    # listlərin count metodundan istifadə etmədən (len metodu + filter | Built-in function):
+    print(count_of_element_2.__name__)
+    print(count_of_element_2(5,my_list))   # 7
+    print(count_of_element_2(4,my_list))   # 3
+    print(count_of_element_2(6,my_list))   # 6
+    print(count_of_element_2(100,my_list)) # 0
+
